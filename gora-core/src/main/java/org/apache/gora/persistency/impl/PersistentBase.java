@@ -27,6 +27,7 @@ import org.apache.avro.Schema.Field;
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.specific.SpecificRecord;
 import org.apache.avro.specific.SpecificRecordBase;
+import org.apache.flink.api.common.typeinfo.TypeInfo;
 import org.apache.gora.flink.PersistentTypeInfoFactory;
 import org.apache.gora.persistency.Dirtyable;
 import org.apache.gora.persistency.Persistent;

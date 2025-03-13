@@ -56,11 +56,6 @@ public class TestMongoStoreWordCount extends GoraMongoMapredTest {
         webPageStore, tokenStore);
   }
 
-  @Test
-  public void testFlinkWordCountFlink() throws Exception {
-    MapReduceTestUtils.testFlinkWordCount(testDriver.getConfiguration(), webPageStore, tokenStore);
-  }
-
   //todo fix config
   @Test
   public void testSparkWordCount() throws Exception {

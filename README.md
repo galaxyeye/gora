@@ -7,7 +7,20 @@
 [![license](https://img.shields.io/github/license/apache/gora.svg?maxAge=2592000?style=plastic)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Maven Central](https://img.shields.io/maven-central/v/org.apache.gora/gora.svg?maxAge=2592000?style=plastic)](http://search.maven.org/#search|ga|1|g%3A%22org.apache.gora%22)
 [![Twitter URL](https://img.shields.io/twitter/url/http/apachegora.svg?style=social&maxAge=2592000?style=plastic)](https://twitter.com/apachegora)
- 
+
+## Introduction
+
+This is a simplified version for official Apache Gora project.
+
+This repo includes only the following modules:
+
+* gora-core
+* gora-mongodb
+
+We may update this codebase frequently, especially the versions of its dependencies.
+
+## Gora Official Introduction
+
 The Apache Gora open source framework provides an in-memory data model 
 and persistence for big data. Gora supports persisting to column stores, 
 key value stores, document stores and RDBMSs, and analyzing the data 

@@ -15,7 +15,6 @@
  * limitations under the License.
  */
 /**
- * This package contains creates and stores releated classes and some data
- * to be used in the tests.
+ * This package contains spark examples.
  */
-package org.apache.gora.examples;
+package org.apache.gora.examples.spark;
