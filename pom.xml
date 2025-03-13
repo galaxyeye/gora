@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.apache</groupId>
+    <artifactId>apache</artifactId>
+    <version>24</version>
+  </parent>
+
+  <groupId>org.apache.gora</groupId>
+  <artifactId>gora</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Apache Gora</name>
+  <description>The Apache Gora open source framework provides an in-memory data model and
+    persistence for big data. Gora supports persisting to column stores, key value stores,
+    document stores and RDBMSs, and analyzing the data with extensive Apache Hadoop MapReduce
+    support. </description>
+  <url>http://gora.apache.org</url>
+  <inceptionYear>2010</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>The Apache Software Foundation</name>
+    <url>http://www.apache.org/</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>alparslanavci</id>
+      <name>Alparslan Avci</name>
+      <email>alparslanavci [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>ab</id>
+      <name>Andrzej Bialecki</name>
+      <email>ab [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>ahart</id>
+      <name>Andrew Hart</name>
+      <email>ahart [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>alfonsonishikawa</id>
+      <name>Alfonso Nishikawa</name>
+      <email>alfonsonishikawa [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>cguzel</id>
+      <name>Cihad Guzel</name>
+      <email>cguzel [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>dogacan</id>
+      <name>Doğacan Güney</name>
+      <email>dogacan [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>enis</id>
+      <name>Enis Soztutar</name>
+      <email>enis [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>ferdy</id>
+      <name>Ferdy Galema</name>
+      <email>ferdy [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>hsaputra</id>
+      <name>Henry Saputra</name>
+      <email>hsaputra [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>iocanel</id>
+      <name>Ioannis Canellos</name>
+      <email>iocanel [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>jhnmora000</id>
+      <name>John Mora</name>
+      <email>jhnmora000[at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>jnioche</id>
+      <name>Julien Nioche</name>
+      <email>jnioche[at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>kamaci</id>
+      <name>Furkan KAMACI</name>
+      <email>kamaci [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>kturner</id>
+      <name>Keith Turner</name>
+      <email>kturner [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>nishadi</id>
+      <name>Nishadi Kirielle</name>
+      <email>nishadi [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>djkevincr</id>
+      <name>Kevin Ratnasekera</name>
+      <email>djkevincr [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+        <role>PMC Chair</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>madhawa</id>
+      <name>Madhawa Kasun Gunasekara</name>
+      <email>madhawa [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>lewismc</id>
+      <name>Lewis John McGibbney</name>
+      <email>lewismc [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+        <role>Champion</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>mattmann</id>
+      <name>Chris Mattmann</name>
+      <email>mattmann [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+        <role>Champion</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>sertan</id>
+      <name>Sertan Alkan</name>
+      <email>sertan [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>woollard</id>
+      <name>Dave Woollard</name>
+      <email>woollard [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>kazk</id>
+      <name>Kazuomi Kashii</name>
+      <email>kazk [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>rmarroquin</id>
+      <name>Renato Marroquin</name>
+      <email>rmarroquin [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>rherget</id>
+      <name>Roland von Herget</name>
+      <email>rherget [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>drazzib</id>
+      <name>Damien Raude-Morvan</name>
+      <email>drazzib [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>otrack</id>
+      <name>Pierre Sutra</name>
+      <email>otrack [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>talat</id>
+      <name>Talat UYARER</name>
+      <email>talat [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>chanakadkb</id>
+      <name>Chanaka Balasooriya</name>
+      <email>chanakadkb [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>sheriffo</id>
+      <name>Sheriffo Ceesay</name>
+      <email>sheriffo [at] apache [dot] org</email>
+      <roles>
+        <role>Committer</role>
+        <role>PMC Member</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <mailingLists>
+    <mailingList>
+      <name>Dev Mailing List</name>
+      <post>dev[at]gora[dot]apache[dot]org</post>
+      <subscribe>dev-subscribe[at]gora[dot]apache[dot]org</subscribe>
+      <unsubscribe>dev-unsubscribe[at]gora[dot]apache[dot]org</unsubscribe>
+      <archive>http://mail-archives.apache.org/mod_mbox/gora-dev/</archive>
+    </mailingList>
+
+    <mailingList>
+      <name>User Mailing List</name>
+      <post>user[at]gora[dot]apache[dot]org</post>
+      <subscribe>user-subscribe[at]gora[dot]apache[dot]org</subscribe>
+      <unsubscribe>user-unsubscribe[at]gora[dot]apache[dot]org</unsubscribe>
+      <archive>http://mail-archives.apache.org/mod_mbox/gora-dev/</archive>
+    </mailingList>
+
+    <mailingList>
+      <name>Commits Mailing List</name>
+      <post>commits[at]gora[dot]apache[dot]org</post>
+      <subscribe>commits-subscribe[at]gora[dot]apache[dot]org</subscribe>
+      <unsubscribe>commits-unsubscribe[at]gora[dot]apache[dot]org</unsubscribe>
+      <archive>http://mail-archives.apache.org/mod_mbox/gora-commits</archive>
+    </mailingList>
+  </mailingLists>
+
+  <scm>
+    <connection>scm:git:http://gitbox.apache.org/repos/asf/gora.git</connection>
+    <developerConnection>scm:git:http://gitbox.apache.org/repos/asf/gora.git</developerConnection>
+    <url>https://gitbox.apache.org/repos/asf/gora.git</url>
+    <tag>HEAD</tag>
+  </scm>
+  <issueManagement>
+    <system>JIRA</system>
+    <url>https://issues.apache.org/jira/browse/GORA</url>
+  </issueManagement>
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>https://builds.apache.org/job/Gora-trunk/</url>
+  </ciManagement>
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+    <directory>target</directory>
+    <outputDirectory>${basedir}/target/classes</outputDirectory>
+    <finalName>${project.artifactId}-${project.version}</finalName>
+    <testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory>
+    <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+    <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>${maven-assembly-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>assembly</id>
+              <phase>package</phase>
+              <goals>
+                <goal>single</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <tarLongFileMode>posix</tarLongFileMode>
+            <finalName>${assembly.finalName}</finalName>
+            <descriptors>
+              <descriptor>sources-dist/src/main/assembly/src.xml</descriptor>
+            </descriptors>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven-deploy-plugin.version}</version>
+          <configuration>
+            <updateReleaseInfo>true</updateReleaseInfo>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>${maven-clean-plugin.version}</version>
+          <configuration>
+            <filesets>
+              <fileset>
+                <directory>${basedir}/lib</directory>
+                <followSymlinks>false</followSymlinks>
+                <useDefaultExcludes>true</useDefaultExcludes>
+                <includes>
+                  <include>*.jar</include>
+                </includes>
+              </fileset>
+            </filesets>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>${maven-release-plugin.version}</version>
+          <configuration>
+            <preparationGoals>install</preparationGoals>
+            <mavenExecutorId>forked-path</mavenExecutorId>
+            <useReleaseProfile>false</useReleaseProfile>
+            <tagNameFormat>apache-gora-@{project.version}</tagNameFormat>
+            <arguments>-Papache-release,release</arguments>
+            <autoVersionSubmodules>true</autoVersionSubmodules>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.maven.scm</groupId>
+              <artifactId>maven-scm-provider-gitexe</artifactId>
+              <version>1.9</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven-compiler-plugin.version}</version>
+          <inherited>true</inherited>
+          <configuration>
+            <source>${javac.src.version}</source>
+            <target>${javac.target.version}</target>
+            <showDeprecation>true</showDeprecation>
+            <showWarnings>true</showWarnings>
+            <!-- executable>{JAVA_HOME_1_7}/bin/javac</executable -->
+            <fork>true</fork>
+          </configuration>
+          <executions>
+            <!-- Eclipse do not support duplicated package-info.java, in both main and test. -->
+            <!-- https://stackoverflow.com/questions/11246223/eclipse-javadoc-the-type-package-info-is-already-defined/35101574#35101574 -->
+            <execution>
+              <id>default-testCompile</id>
+              <phase>test-compile</phase>
+              <configuration>
+                <testExcludes>
+                  <exclude>**/package-info.java</exclude>
+                </testExcludes>
+              </configuration>
+              <goals>
+                <goal>testCompile</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${maven-javadoc-plugin.version}</version>
+          <configuration>
+            <excludePackageNames>org.apache.gora.tutorial.log.generated;org.apache.gora.goraci.generated;org.apache.gora.benchmark.generated;</excludePackageNames>
+          </configuration>
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+              <configuration>
+                <quiet>true</quiet>
+                <archive>
+                  <manifest>
+                    <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                    <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                  </manifest>
+                  <manifestEntries>
+                    <Implementation-Build>${implementation.build}</Implementation-Build>
+                    <Implementation-Build-Date>${maven.build.timestamp}</Implementation-Build-Date>
+                    <X-Compile-Source-JDK>${javac.src.version}</X-Compile-Source-JDK>
+                    <X-Compile-Target-JDK>${javac.target.version}</X-Compile-Target-JDK>
+                  </manifestEntries>
+                </archive>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version><!--$NO-MVN-MAN-VER$ -->
+        <inherited>true</inherited>
+        <configuration>
+          <systemPropertyVariables>
+            <hadoop.log.dir>${project.basedir}/target/test-logs/</hadoop.log.dir>
+            <test.build.data>${project.basedir}/target/test-data/</test.build.data>
+          </systemPropertyVariables>
+          <argLine>-Xmx512m</argLine>
+          <forkMode>always</forkMode>
+          <testFailureIgnore>false</testFailureIgnore>
+          <forkedProcessTimeoutInSeconds>2400</forkedProcessTimeoutInSeconds>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>${maven-dependency-plugin.version}</version>
+        <inherited>true</inherited>
+        <executions>
+          <execution>
+            <id>copy</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>lib</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+
+  <modules>
+    <module>gora-core</module>
+    <module>gora-mongodb</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Internal Dependencies -->
+      <dependency>
+        <groupId>org.apache.gora</groupId>
+        <artifactId>gora-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.gora</groupId>
+        <artifactId>gora-core</artifactId>
+        <version>${project.version}</version>
+        <type>test-jar</type>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.gora</groupId>
+        <artifactId>gora-mongodb</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.gora</groupId>
+        <artifactId>gora-mongodb</artifactId>
+        <version>${project.version}</version>
+        <type>test-jar</type>
+      </dependency>
+
+      <!-- End of Internal Depednecies -->
+
+      <dependency>
+        <groupId>org.apache.spark</groupId>
+        <artifactId>spark-core_2.11</artifactId>
+        <version>${spark.version}</version>
+        <scope>provided</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.eclipse.jetty.orbit</groupId>
+            <artifactId>javax.servlet</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <!-- Flink dependencies -->
+
+      <dependency>
+        <groupId>org.apache.flink</groupId>
+        <artifactId>flink-core</artifactId>
+        <version>${flink.version}</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.flink</groupId>
+        <artifactId>flink-hadoop-compatibility_2.11</artifactId>
+        <version>${flink.version}</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.flink</groupId>
+        <artifactId>flink-java</artifactId>
+        <version>${flink.version}</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.flink</groupId>
+        <artifactId>flink-avro</artifactId>
+        <version>${flink.version}</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.flink</groupId>
+        <artifactId>flink-clients_2.11</artifactId>
+        <version>${flink.version}</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <!--Hadoop dependencies -->
+      <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-client</artifactId>
+        <version>${hadoop-2.version}</version>
+        <optional>true</optional>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+        <version>${cxf-rt-frontend-jaxrs.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.avro</groupId>
+        <artifactId>avro</artifactId>
+        <version>${avro.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>ant</groupId>
+            <artifactId>ant</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.avro</groupId>
+        <artifactId>avro-compiler</artifactId>
+        <version>${avro.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>ant</groupId>
+            <artifactId>ant</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.avro</groupId>
+        <artifactId>avro-mapred</artifactId>
+        <version>${avro.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>ant</groupId>
+            <artifactId>ant</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+
+      <dependency>
+        <groupId>org.testcontainers</groupId>
+        <artifactId>testcontainers-bom</artifactId>
+        <version>${testcontainers.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+
+      <dependency>
+        <groupId>com.ibm.icu</groupId>
+        <artifactId>icu4j</artifactId>
+        <version>49.1</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>1.7</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-cli</groupId>
+        <artifactId>commons-cli</artifactId>
+        <version>1.2</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-digester</groupId>
+        <artifactId>commons-digester</artifactId>
+        <version>1.7</version>
+        <exclusions>
+          <exclusion>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>commons-fileupload</groupId>
+        <artifactId>commons-fileupload</artifactId>
+        <version>1.2.1</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${commons-io.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>${httpcomponents.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpmime</artifactId>
+        <version>${httpcomponents.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.1.1</version>
+      </dependency>
+      <dependency>
+        <groupId>hsqldb</groupId>
+        <artifactId>hsqldb</artifactId>
+        <version>1.8.0.10</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta-regexp</groupId>
+        <artifactId>jakarta-regexp</artifactId>
+        <version>1.4</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.activation</groupId>
+        <artifactId>activation</artifactId>
+        <version>1.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-compress</artifactId>
+        <version>1.4.1</version>
+      </dependency>
+
+      <!-- Misc Dependencies -->
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>${commons-lang.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.jdom</groupId>
+        <artifactId>jdom</artifactId>
+        <version>${jdom.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>maven-plugins</groupId>
+            <artifactId>maven-cobertura-plugin</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>maven-plugins</groupId>
+            <artifactId>maven-findbugs-plugin</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <!-- Logging Dependencies -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-jdk14</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>log4j-over-slf4j</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>${log4j.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>com.sun.jdmk</groupId>
+            <artifactId>jmxtools</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>com.sun.jmx</groupId>
+            <artifactId>jmxri</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>javax.jms</groupId>
+            <artifactId>jms</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+
+      <!-- Gora MongoDB Dependencies -->
+      <dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongo-java-driver</artifactId>
+        <version>${mongo.driver.version}</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>${json.version}</version>
+      </dependency>
+
+
+      <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-minicluster</artifactId>
+        <scope>test</scope>
+        <version>${hadoop-2.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <properties>
+    <!-- Dependencies -->
+    <osgi.version>4.2.0</osgi.version>
+    <!-- Avro Dependencies -->
+    <avro.version>1.8.2</avro.version>
+    <!--     <jackson.version>1.6.9</jackson.version> -->
+    <!-- Hadoop Dependencies -->
+    <hadoop-2.version>2.5.2</hadoop-2.version>
+    <hadoop-2.test.version>2.5.2</hadoop-2.test.version>
+    <hbase.version>2.1.1</hbase.version>
+    <hbase.test.version>2.1.1</hbase.test.version>
+    <!-- Misc Dependencies -->
+    <guava.version>13.0</guava.version>
+    <commons-lang.version>2.6</commons-lang.version>
+    <commons-io.version>2.5</commons-io.version>
+    <httpcomponents.version>4.5.6</httpcomponents.version>
+    <jdom.version>1.1.3</jdom.version>
+    <hsqldb.version>2.2.8</hsqldb.version>
+    <mysql.version>5.1.18</mysql.version>
+    <xerces.version>2.9.1</xerces.version>
+    <json.version>20180813</json.version>
+    <!-- Logging Dependencies -->
+    <log4j.version>1.2.16</log4j.version>
+    <slf4j.version>1.6.6</slf4j.version>
+
+    <mongo.driver.version>3.12.10</mongo.driver.version>
+    <flink.version>1.6.2</flink.version>
+    <spark.version>2.4.8</spark.version>
+
+    <!-- Testing Dependencies -->
+    <junit.version>4.10</junit.version>
+    <testcontainers.version>1.15.2</testcontainers.version>
+
+    <!-- gora-benchmark and version dependencies -->
+    <site.ycsb.version>0.17.0</site.ycsb.version>
+    <datafactory.version>0.8</datafactory.version>
+
+    <cxf-rt-frontend-jaxrs.version>2.5.2</cxf-rt-frontend-jaxrs.version>
+
+    <!-- Maven Plugin Dependencies -->
+    <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+    <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
+    <!-- pegged at 2.3.2 for eclipse users, see https://github.com/sonatype/m2eclipse-extras/issues/10 -->
+    <maven-jar-plugin.version>2.3.2</maven-jar-plugin.version>
+    <maven-dependency-plugin.version>2.9</maven-dependency-plugin.version>
+    <build-helper-maven-plugin.version>1.7</build-helper-maven-plugin.version>
+    <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
+    <maven-release-plugin.version>2.5</maven-release-plugin.version>
+    <maven-bundle-plugin.version>2.5.3</maven-bundle-plugin.version>
+    <maven-source-plugin.version>2.1.2</maven-source-plugin.version>
+    <maven-javadoc-plugin.version>2.8.1</maven-javadoc-plugin.version>
+    <maven-gpg-plugin.version>1.4</maven-gpg-plugin.version>
+    <apache-rat-plugin.version>0.8</apache-rat-plugin.version>
+    <maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
+    <maven-deploy-plugin.version>2.5</maven-deploy-plugin.version>
+    <checksum-maven-plugin.version>1.7</checksum-maven-plugin.version>
+    <maven-clean-plugin.version>2.5</maven-clean-plugin.version>
+
+    <!-- General Properties -->
+    <!--suppress UnresolvedMavenProperty -->
+    <implementation.build>${scmBranch}@r${buildNumber}</implementation.build>
+    <javac.src.version>1.8</javac.src.version>
+    <javac.target.version>1.8</javac.target.version>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ssZ</maven.build.timestamp.format>
+    <skipTests>false</skipTests>
+    <assembly.finalName>apache-${project.build.finalName}</assembly.finalName>
+    <downloads.url>http://www.apache.org/dist/gora</downloads.url>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- reproduceable builds: https://maven.apache.org/guides/mini/guide-reproducible-builds.html -->
+    <project.build.outputTimestamp>1</project.build.outputTimestamp>
+  </properties>
+
+</project>
